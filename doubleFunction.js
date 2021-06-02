@@ -5,22 +5,34 @@ const words = [
     "families"
 ]
 
-const noK = () => {
+const noK = (arr) => {
     const reallyNoK = []
 
-    for(const removeK of words) {
+    for(const removeK of arr) {
         if(removeK.startsWith('k') === false) {
         reallyNoK.push(removeK)
          }
     }   
-    console.log(reallyNoK.join(" "))
+     /* console.log(reallyNoK.join(" "))  */
 
     return reallyNoK
 }
 
 
+const noneK = noK(words)
 
-noK()
+/* console.log(noneK) */
 
-/* console.log(reallyNoK) */
+const arrJoin = (arr) => {
+     const joinArr = arr.join(" ")
+    /* console.log(arr) */
+
+    return joinArr
+}
+
+const project = arrJoin(noneK)
+
+console.log(project)
+
+
 
