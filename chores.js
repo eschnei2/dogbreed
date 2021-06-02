@@ -28,7 +28,14 @@ const choreboy1 = boy =>
  
 const dayOne = pickChores(choreboy1(person), choreboy2(person), choreboy3(person))
 
-console.log(dayOne)
+/* console.log(dayOne) */
+const newDay = "Tuesday"
+
+const dayPlanner = (firstChore, secondChore, thirdChore, boy, day) => {
+    const dayPlanner = (`On ${day}, ${firstChore(boy)}, and ${secondChore(boy)}, and ${thirdChore(boy)}`)
+    return dayPlanner
 
 
+}
 
+console.log(dayPlanner(choreboy1, choreboy2, choreboy3, person, newDay))
